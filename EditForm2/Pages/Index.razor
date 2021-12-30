@@ -2,11 +2,9 @@
 
 <PageTitle>Index</PageTitle>
 
-<h1>Hello, world!</h1>
+<h1>Inputcheckbox not rendered correctly. Also, formatting seems wrong - position of text box for Business Area</h1>
 
 Welcome to your new app.
-
-<SurveyPrompt Title="How is Blazor working for you?" />
 
 <EditForm Model="@ConfigVm">
     <div class="form-group row">
@@ -20,6 +18,9 @@ Welcome to your new app.
         <InputCheckbox id="RouteInboundSmsToEmail" class="form-control col-sm-8" @bind-Value="@ConfigVm.RouteInboundSmsToEmail" placeholder=""></InputCheckbox>
     </div>
 </EditForm>
+
+<p>BizArea =  @ConfigVm.BusinessArea</p>
+<p>CheckboxValue =  @ConfigVm.RouteInboundSmsToEmail</p>
 
 @code
 {
