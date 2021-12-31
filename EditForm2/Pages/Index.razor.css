@@ -1,0 +1,13 @@
+﻿body {
+}
+
+.wrapper {
+    display: grid;
+    /*height: 200px;*/
+    grid-template-columns: max-content 1fr;
+    grid-template-rows: 50% 50%;
+    row-gap: 5em;
+    column-gap: 5em;
+    background-color: #fff;
+    color: #444;
+}

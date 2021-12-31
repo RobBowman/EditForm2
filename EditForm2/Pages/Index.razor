@@ -1,21 +1,15 @@
 ﻿@page "/"
 
-<PageTitle>Index</PageTitle>
-
-<h1>Inputcheckbox not rendered correctly. Also, formatting seems wrong - position of text box for Business Area</h1>
-
-Welcome to your new app.
-
 <EditForm Model="@ConfigVm">
-    <div class="form-group row">
-            <label for="BusinessArea" class="col-sm-3">Business Area: </label>
-            <InputText id="BusinessArea" class="form-control col-sm-8" @bind-Value="@ConfigVm.BusinessArea" placeholder=""></InputText>
-            <ValidationMessage class="offset-sm-3 col-sm-8" For="@(() => ConfigVm.BusinessArea)" />
+    <div class="wrapper">
+            <label for="BusinessArea">Business Area: </label>
+            <InputText id="BusinessArea" class="form-control" @bind-Value="@ConfigVm.BusinessArea" placeholder=""></InputText>
+            <ValidationMessage For="@(() => ConfigVm.BusinessArea)" />
         </div>
 
-    <div class="form-group row">
-        <label for="RouteInboundSmsToEmail" class="col-sm-3">Route Inbound Sms to Email: </label>
-        <InputCheckbox id="RouteInboundSmsToEmail" class="form-control col-sm-8" @bind-Value="@ConfigVm.RouteInboundSmsToEmail" placeholder=""></InputCheckbox>
+    <div class="wrapper">
+        <label for="RouteInboundSmsToEmail">Route Inbound Sms to Email: </label>
+        <InputCheckbox id="RouteInboundSmsToEmail" class="form-control" @bind-Value="@ConfigVm.RouteInboundSmsToEmail" placeholder=""></InputCheckbox>
     </div>
 </EditForm>
 
